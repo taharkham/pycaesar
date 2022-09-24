@@ -12,8 +12,8 @@ def main():
     # Парсинг команды cmd/bash
     parser = argparse.ArgumentParser(description='Шифрование и расшифровка текста шифром Цезаря.')
 
-    parser.add_argument('-s', '--step', type=int, default=-1, help="сдвиг букв по шифру")
-    parser.add_argument('-t', '--text', type=str, default="Hello world!", help="сам текст")
+    parser.add_argument('-s', '--step', type=int, help="сдвиг букв по шифру")
+    parser.add_argument('-t', '--text', type=str, help="сам текст")
     parser.add_argument('-i', '--input', type=str, help="Откуда брать текст")
     parser.add_argument('-o', '--output', type=str, help="Куда отправлять результат")
 
@@ -29,17 +29,19 @@ def main():
         if args.input:
             with open(args.input, "r", encoding="utf-8") as file:
                 args.text = file.read()
+
         else: 
             args.text = input("Введите текст >> ")
 
     # Шифровка
-    result = get_caesar(args.text)
+    result = get_caesar(args.text, args.step)
 
     # Печать результата в консоль/файл
     if args.output:
         with open(args.output, "w+", encoding="utf-8") as file:
             file.write(result)
             print("Ваш результат записан в указанном файле:", args.output)
+
     else:
         print("Ваш результат:", result)
 
