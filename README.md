@@ -12,14 +12,14 @@
 python3 app.py
 ```
 
-### Запуск в ручном режиме
+### Помощь по всем аргументам
 ```bash
-python3 app.py
+python3 app.py -h
 ```
 
-### Запуск в автоматическом режиме (со своим шагом)
+### Запуск в автоматическом режиме
 ```bash
-python3 app.py -s [N] --text "Hello world!"
+python3 app.py --step 3 --text "Hello world!"
 ```
 
 ### Запуск с работой файлов
