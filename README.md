@@ -28,6 +28,6 @@ python3 app.py -i "./input.txt" -o "./output.txt"
 ```
 
 ## Скриншоты
-![Значение "Hello world!"](/img/jiyH1BBmnHc.jpg)
-![Значение "Привет, мир!"](/img/egSmuzFGj-8.jpg)
-![Значение калька](/img/3aNVdkKmjTA.jpg)
+![Значение "Hello world!"](/img/jiyH1BBmnHc.jpg)  
+![Значение "Привет, мир!"](/img/egSmuzFGj-8.jpg)  
+![Значение калька](/img/3aNVdkKmjTA.jpg)  
