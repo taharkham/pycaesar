@@ -22,8 +22,16 @@ def main():
     # обработка аргументов к команде
     # Количество шагов по смещению буквы
     if not args.step:
-        args.step = int(input("Введите шаг >> "))
+        while True:
+            try:
+                args.step = int(input("Введите шаг >> "))
+                
+            except Exception as e:
+                print("Ошибка:", e)
 
+            finally:
+                break
+        
     # Текст для шифрования
     if not args.text:
         if args.input:
@@ -31,7 +39,14 @@ def main():
                 args.text = file.read()
 
         else: 
-            args.text = input("Введите текст >> ")
+            while True:
+                args.text = input("Введите текст >> ")
+
+                if args.text == "":
+                    print("Ошибка: нельзя вставлять пустой текст")
+                    continue
+
+                break
 
     # Шифровка
     result = get_caesar(args.text, args.step)
